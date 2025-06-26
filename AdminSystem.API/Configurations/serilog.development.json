@@ -1,0 +1,18 @@
+﻿{
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.RollingFile", "Serilog.Sinks.Async" ],
+    "MinimumLevel": {
+      "Default": "Error",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning"
+      }
+    },
+    "Enrich": [
+      "FromLogContext",
+      "WithMachineName",
+      "WithProcessId",
+      "WithThreadId"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "prepaidtopostpaid": {
+    "CreateCustomer": "http://180.211.137.7:90/prepay/prepay/testCode/customIbcs!createCustomerfromPostpaid.do",
+    "CustomerListGetByDeptCode": "http://180.211.137.7:90/prepay/prepay/testCode/customIbcs!getPostpaidCustomerList.do",
+    "userName": "zubayer",
+    "password": "m7PM/lj+MYKoUcaydxQQe6Ez6Qal5N5DQAArpAmFcgOn+TLK3tN+VA=="
+  },
+  "prepaidtopostpaidmod": {
+    "CreateCustomer": "http://192.168.205.18/prepay/prepay/testCode/customIbcs!postpaidApi.do",
+    "userName": "MOD_CC_API_User",
+    "password": "4+jD3c6hG8DMA5su/kXTtXWId60/Msxja0ZrZjEsVUnttGBtIuZW2A=="
+  }
+}

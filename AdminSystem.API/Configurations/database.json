@@ -1,0 +1,5 @@
+{
+  "DatabaseSettings": {
+    "ConnectionString": "User ID =postgres;Password=sa;Server=127.0.0.1;Port=5432;Database=adminDb1.0.1;Integrated Security=true;Pooling=true;" 
+  }
+}

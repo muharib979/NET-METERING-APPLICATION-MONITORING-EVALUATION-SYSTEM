@@ -1,0 +1,11 @@
+{
+  "MailSettings": {
+    "DisplayName": "Irfan Monir",
+    "EnableVerification": true,
+    "From": "mdmoniruddin21123@gmail.com",
+    "Host": "smtp.gmail.com",
+    "Password": "moniramonir23",
+    "Port": 587,
+    "UserName": "mdmoniruddin21123@gmail.com"
+  }
+}

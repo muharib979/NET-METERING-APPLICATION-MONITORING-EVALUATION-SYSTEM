@@ -1,0 +1,27 @@
+﻿.swagger-ui .topbar {
+    background-color: #2ab997 !important;
+    padding:20px 0;
+}
+.topbar-wrapper img[alt="Swagger UI"] {
+    visibility: hidden;
+}
+
+/*.topbar-wrapper .link::after {
+    content: url("https://3.bp.blogspot.com/-LzX3pyh4BS8/WHy-lo98C4I/AAAAAAAAEH0/DntjFEVfq3sNAXlSt15GbI8C_QG9PCxzgCLcB/s1600/PDB%2BLogo.png");
+    color: #fff;
+    visibility: visible;
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+}*/
+
+.topbar-wrapper .link {
+    background: url("https://3.bp.blogspot.com/-LzX3pyh4BS8/WHy-lo98C4I/AAAAAAAAEH0/DntjFEVfq3sNAXlSt15GbI8C_QG9PCxzgCLcB/s1600/PDB%2BLogo.png") no-repeat;
+    background-size: contain;
+    background-clip: border-box;
+}
+
+.swagger-ui img {
+    border-style: none;
+}

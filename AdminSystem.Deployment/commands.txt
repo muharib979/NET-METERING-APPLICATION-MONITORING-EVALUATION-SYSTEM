@@ -1,0 +1,23 @@
+SignalR
+=======
+docker build -f SignalRDockerfile -t nazmuls3/cfems-signalr:v1.0.0 .
+docker push nazmuls3/cfems-signalr:v1.0.0
+
+Backend
+=======
+docker build -t nazmuls3/cfems_backend:v1.0.0 .
+docker push nazmuls3/cfems_backend:v1.0.0
+
+Frontend
+========
+ng build --configuration production --aot --outputHashing=all
+docker build -t nazmuls3/cfems_frontend:v1.0.0 .
+docker push nazmuls3/cfems_frontend:v1.0.0
+
+Kubernetes deploy
+=================
+kubectl apply -f cfems-backend-deployment.yaml
+
+Kubernetes Re-deploy(Restart)
+=============================
+kubectl rollout restart deployment <deployment-name>

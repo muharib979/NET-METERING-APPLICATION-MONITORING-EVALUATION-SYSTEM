@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Shared.DTOs.MISCBILL
+{
+    public class MeterDTO
+    {
+        public string? User { get; set; }
+    }
+}

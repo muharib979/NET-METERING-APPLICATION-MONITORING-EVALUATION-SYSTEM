@@ -1,0 +1,22 @@
+{
+  "paymentgateway": {
+    "baseUrl": "http://localhost:5160/",
+    "confirmUrl": "api/v1/success",
+    "failedUrl": "api/v1/failed",
+    "cencelUrl": "api/v1/failed",
+    "angularsuccessRedection": "http://localhost:4200/startup/payment-success",
+    "angularfailedRedection": "http://localhost:4200/startup/payment-failed",
+    "sandboxStoreId": "test_bpdb",
+    "storePassword": "test_bpdb@ssl"
+  },
+  "paymentgatewayConsumerBill": {
+    "baseUrl": "http://localhost:5160/",
+    "confirmUrl": "api/v1/consumer-payment-success",
+    "failedUrl": "api/v1/consumer-payment-failed",
+    "cencelUrl": "api/v1/consumer-payment-failed",
+    "angularsuccessRedection": "http://localhost:4200/startup/payment-success",
+    "angularfailedRedection": "http://localhost:4200/startup/payment-failed",
+    "sandboxStoreId": "test_bpdb",
+    "storePassword": "test_bpdb@ssl"
+  }
+}

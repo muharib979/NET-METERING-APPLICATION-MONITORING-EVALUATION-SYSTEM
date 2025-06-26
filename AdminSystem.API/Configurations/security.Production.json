@@ -1,0 +1,14 @@
+{
+  "SecuritySettings": {
+    "Provider": "Jwt",
+    "JwtSettings": {
+      "key": "S0M3RAN0MS3CR3T!1!MAG1C!1!",
+      "tokenExpirationInMinutes": 1440,
+      "refreshTokenExpirationInMinutes": 180
+    },
+    "OtpSettings": {
+      "otpExpirationInMinutes": 5
+    },
+    "DefaultPassword": "123456"
+  }
+}

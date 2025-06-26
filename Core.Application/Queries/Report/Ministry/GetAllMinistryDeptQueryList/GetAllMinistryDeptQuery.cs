@@ -1,0 +1,37 @@
+﻿using Core.Application.Interfaces.Cutomers.RepositoryInterfaces;
+using Core.Application.Interfaces.Ministry;
+using Core.Application.Queries.Customers.CustomerType;
+using Shared.DTOs.Common.Wrappers;
+using Shared.DTOs.CustomerDto;
+using Shared.DTOs.Ministry;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Core.Application.Queries.Report.Ministry.GetAllMinistryDeptQueryList
+{
+    public class GetAllMinistryDeptQuery : IRequest<Response<List<MinistryDepartmentDto>>>
+    {
+        public class Handler : IRequestHandler<GetAllMinistryDeptQuery, Response<List<MinistryDepartmentDto>>>
+    {
+        private readonly IMinistryRepository _repository;
+         private readonly IMapper _mapper;
+
+        public Handler(IMinistryRepository repository, IMapper mapper)
+            {
+                _repository = repository;
+                _mapper = mapper;
+            }
+
+            public async Task<Response<List<MinistryDepartmentDto>>> Handle(GetAllMinistryDeptQuery request, CancellationToken cancellationToken)
+        {
+            var result = await _repository.GetAllMinistryDept();
+
+            return Response<List<MinistryDepartmentDto>>.Success(_mapper.Map<List<MinistryDepartmentDto>>(result), "Success");
+
+        }
+    }
+}
+}

@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: signalr-deployment
+  labels:
+    app: signalr
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: signalr
+  template:
+    metadata:
+      labels:
+        app: signalr
+    spec:
+      containers:
+      - name: signalr
+        image: nazmuls3/cfems-signalr:v1.0.0
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: signalr-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: signalr
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80

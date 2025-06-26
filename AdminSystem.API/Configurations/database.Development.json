@@ -1,0 +1,18 @@
+{
+  "DatabaseSettings": {
+    //"ConnectionString": "Server=BDDKNBSI2207031\\SQLEXPRESS;Initial Catalog=cfemsdbv1.1.0;Persist Security Info=False;User ID=sa;Password=Zb12345678;MultipleActiveResultSets=True;Connection Timeout=30;TrustServerCertificate=True;" //zakaria
+    //"ConnectionString": "User ID =postgres;Password=1110;Server=127.0.0.1;Port=5432;Database=TestDB2;Integrated Security=true;Pooling=true;", //sadman
+    //"ConnectionString": "Data Source = (DESCRIPTION =  (ADDRESS_LIST =  (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) )(CONNECT_DATA = (SID = orcl3))); User ID = abc; Password = 123"
+    //"ConnectionString": "Server=tcp:cfems-stag-dbserver.database.windows.net,1433;Initial Catalog=cfems-stag-db;Persist Security Info=False;User ID=cfems-stag-db-admin;Password=qw@a8RG[gH5c9*wS;MultipleActiveResultSets=True;Connection Timeout=30;TrustServerCertificate=True;" // live_db
+    //"ConnectionString": "Data Source = (DESCRIPTION =  (ADDRESS_LIST =  (ADDRESS = (PROTOCOL = TCP)(HOST = 123.200.18.94)(PORT = 1521)) )(CONNECT_DATA = (SID = dbjam))); User ID = miscbillapp; Password = miscbillapp",
+    //"ConnectionString": "Data Source = (DESCRIPTION =  (ADDRESS_LIST =  (ADDRESS = (PROTOCOL = TCP)(HOST = 119.40.95.187)(PORT = 1521)) )(CONNECT_DATA = (SID = dbjam))); User ID = miscbill; Password = miscbill"
+    //"ConnectionString": "Data Source = (DESCRIPTION =  (ADDRESS_LIST =  (ADDRESS = (PROTOCOL = TCP)(HOST = localhost)(PORT = 1521)) )(CONNECT_DATA = (SID = xe))); User ID = amran; Password = ss728292"
+    "ConnectionString": "Data Source = (DESCRIPTION =  (ADDRESS_LIST =  (ADDRESS = (PROTOCOL = TCP)(HOST = 192.168.0.107)(PORT = 1521)) )(CONNECT_DATA = (SID = mbsdb))); User ID = miscbil_old; Password = miscbill",
+    "ConnectionStringMISCBILLTRANS": "Data Source = (DESCRIPTION =  (ADDRESS_LIST =  (ADDRESS = (PROTOCOL = TCP)(HOST = 119.40.95.187)(PORT = 1521)) )(CONNECT_DATA = (SID = dbjam))); User ID = MISCBILLDATATRANS; Password = miscbilldatatrans",
+    "ConnectionStringCONSBILLPAY": "Data Source = (DESCRIPTION =  (ADDRESS_LIST =  (ADDRESS = (PROTOCOL = TCP)(HOST = 119.40.95.187)(PORT = 1521)) )(CONNECT_DATA = (SID = dbjam))); User ID = CONSBILLPAY; Password = consbillpay",
+    "ConnectionStringCONSBILLDATATRANS": "Data Source = (DESCRIPTION =  (ADDRESS_LIST =  (ADDRESS = (PROTOCOL = TCP)(HOST = 119.40.95.187)(PORT = 1521)) )(CONNECT_DATA = (SID = dbjam))); User ID = CONSBILLDATATRANS; Password = consbilldatatrans",
+    "Timeout": "2"
+
+
+  }
+}

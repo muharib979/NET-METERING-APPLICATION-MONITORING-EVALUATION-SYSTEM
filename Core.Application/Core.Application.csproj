@@ -1,0 +1,68 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Commands\MISCBILL\SupplementaryBillGenerate.cs" />
+    <Compile Remove="Interfaces\IUnionPorishod.cs" />
+    <Compile Remove="Interfaces\MiscBilling\ILocation.cs" />
+    <Compile Remove="Interfaces\MiscBilling\ILocationRepository.cs" />
+    <Compile Remove="Interfaces\MiscBilling\IMeterOwner.cs" />
+    <Compile Remove="Interfaces\MISReport\IExistingConsumerpenaltyRepository.cs" />
+    <Compile Remove="Queries\MiscBilling\Imposed_By\GetSupplementaryListQuery.cs" />
+    <Compile Remove="Queries\Report\Ministry\GetMinistryLedgerByDateQueryList\GetMinistryLe.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.Domain\Core.Domain.csproj" />
+    <ProjectReference Include="..\Shared.DTOs\Shared.DTOs.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="ClosedXML" Version="0.95.4" />
+    <PackageReference Include="Dapper.Oracle" Version="2.0.3" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.6" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="10.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="6.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.15.0" />
+    <PackageReference Include="Nancy" Version="2.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Oracle.ManagedDataAccess.Core" Version="3.21.80" />
+    <PackageReference Include="Serilog.Enrichers.Process" Version="2.0.2" />
+    <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+    <PackageReference Include="Serilog.Settings.AppSettings" Version="2.2.2" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.4.0" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
+    <PackageReference Include="Serilog.Sinks.Oracle" Version="1.1.1" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.15.0" />
+    <PackageReference Include="System.Resources.ResourceManager" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Queries\Administration\GetViewDeviceAlarmList\GetViewDeviceAlarmListQueryHandlerResource.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GetViewDeviceAlarmListQueryHandlerResource.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Queries\Administration\GetViewDeviceAlarmList\GetViewDeviceAlarmListQueryHandlerResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>GetViewDeviceAlarmListQueryHandlerResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\MinistryCustomer\EditMinistryCustomer\" />
+    <Folder Include="Commands\OfficeStuff\EditOfficeStuff\" />
+  </ItemGroup>
+
+</Project>

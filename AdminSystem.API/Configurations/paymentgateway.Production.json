@@ -1,0 +1,22 @@
+{
+  "paymentgateway": {
+    "baseUrl": "https://infonetlimited.com/",
+    "confirmUrl": "api/v1/success",
+    "failedUrl": "api/v1/failed",
+    "cencelUrl": "api/v1/failed",
+    "angularsuccessRedection": "https://infonetlimited.com/portal/startup/payment-success",
+    "angularfailedRedection": "https://infonetlimited.com/portal/startup/payment-failed",
+    "sandboxStoreId": "test_bpdb",
+    "storePassword": "test_bpdb@ssl"
+  },
+  "paymentgatewayConsumerBill": {
+    "baseUrl": "https://infonetlimited.com/",
+    "confirmUrl": "api/v1/consumer-payment-success",
+    "failedUrl": "api/v1/consumer-payment-failed",
+    "cencelUrl": "api/v1/consumer-payment-failed",
+    "angularsuccessRedection": "https://infonetlimited.com/portal/startup/payment-success",
+    "angularfailedRedection": "https://infonetlimited.com/portal/startup/payment-failed",
+    "sandboxStoreId": "test_bpdb",
+    "storePassword": "test_bpdb@ssl"
+  }
+}

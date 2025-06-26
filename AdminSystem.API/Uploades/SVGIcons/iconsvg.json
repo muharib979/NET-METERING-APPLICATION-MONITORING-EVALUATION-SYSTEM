@@ -1,0 +1,186 @@
+[
+  {
+    "Name": "notification_active",
+    "Value": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"fill:white\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\"><path d=\"M0 0h24v24H0V0z\" fill=\"none\"/><path d=\"M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zM7.58 4.08L6.15 2.65C3.75 4.48 2.17 7.3 2.03 10.5h2c.15-2.65 1.51-4.97 3.55-6.42zm12.39 6.42h2c-.15-3.2-1.73-6.02-4.12-7.85l-1.42 1.43c2.02 1.45 3.39 3.77 3.54 6.42z\"/></svg>"
+  },
+  {
+    "Name": "notifications_off",
+    "Value": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"fill:white\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\"><path d=\"M0 0h24v24H0V0z\" fill=\"none\"/><path d=\"M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm0-15.5c2.49 0 4 2.02 4 4.5v.1l2 2V11c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68c-.24.06-.47.15-.69.23l1.64 1.64c.18-.02.36-.05.55-.05zM5.41 3.35L4 4.76l2.81 2.81C6.29 8.57 6 9.74 6 11v5l-2 2v1h14.24l1.74 1.74 1.41-1.41L5.41 3.35zM16 17H8v-6c0-.68.12-1.32.34-1.9L16 16.76V17z\"/></svg>"
+  },
+  {
+    "Name": "notifications_paused",
+    "Value": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"fill:white\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\"><path d=\"M0 0h24v24H0V0z\" fill=\"none\"/><path d=\"M9.5 9.8h2.8l-2.8 3.4V15h5v-1.8h-2.8l2.8-3.4V8h-5zM18 16v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zm-4 5c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2z\"/></svg>"
+  },
+  {
+    "Name": "engineering",
+    "Value": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"fill:white\" enable-background=\"new 0 0 24 24\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\"><g><rect fill=\"none\" height=\"24\" width=\"24\"/></g><g><g><path d=\"M9,15c-2.67,0-8,1.34-8,4v2h16v-2C17,16.34,11.67,15,9,15z M3,19c0.22-0.72,3.31-2,6-2c2.7,0,5.8,1.29,6,2H3z\"/><path d=\"M4.74,9H5c0,2.21,1.79,4,4,4s4-1.79,4-4h0.26c0.27,0,0.49-0.22,0.49-0.49V8.49c0-0.27-0.22-0.49-0.49-0.49H13 c0-1.48-0.81-2.75-2-3.45V5.5C11,5.78,10.78,6,10.5,6S10,5.78,10,5.5V4.14C9.68,4.06,9.35,4,9,4S8.32,4.06,8,4.14V5.5 C8,5.78,7.78,6,7.5,6S7,5.78,7,5.5V4.55C5.81,5.25,5,6.52,5,8H4.74C4.47,8,4.25,8.22,4.25,8.49v0.03C4.25,8.78,4.47,9,4.74,9z M11,9c0,1.1-0.9,2-2,2s-2-0.9-2-2H11z\"/><path d=\"M21.98,6.23l0.93-0.83l-0.75-1.3l-1.19,0.39c-0.14-0.11-0.3-0.2-0.47-0.27L20.25,3h-1.5L18.5,4.22 c-0.17,0.07-0.33,0.16-0.48,0.27L16.84,4.1l-0.75,1.3l0.93,0.83C17,6.4,17,6.58,17.02,6.75L16.09,7.6l0.75,1.3l1.2-0.38 c0.13,0.1,0.28,0.18,0.43,0.25L18.75,10h1.5l0.27-1.22c0.16-0.07,0.3-0.15,0.44-0.25l1.19,0.38l0.75-1.3l-0.93-0.85 C22,6.57,21.99,6.4,21.98,6.23z M19.5,7.75c-0.69,0-1.25-0.56-1.25-1.25s0.56-1.25,1.25-1.25s1.25,0.56,1.25,1.25 S20.19,7.75,19.5,7.75z\"/><path d=\"M19.4,10.79l-0.85,0.28c-0.1-0.08-0.21-0.14-0.33-0.19L18.04,10h-1.07l-0.18,0.87c-0.12,0.05-0.24,0.12-0.34,0.19 l-0.84-0.28l-0.54,0.93l0.66,0.59c-0.01,0.13-0.01,0.25,0,0.37l-0.66,0.61l0.54,0.93l0.86-0.27c0.1,0.07,0.2,0.13,0.31,0.18 L16.96,15h1.07l0.19-0.87c0.11-0.05,0.22-0.11,0.32-0.18l0.85,0.27l0.54-0.93l-0.66-0.61c0.01-0.13,0.01-0.25,0-0.37l0.66-0.59 L19.4,10.79z M17.5,13.39c-0.49,0-0.89-0.4-0.89-0.89c0-0.49,0.4-0.89,0.89-0.89s0.89,0.4,0.89,0.89 C18.39,12.99,17.99,13.39,17.5,13.39z\"/></g></g></svg>"
+  },
+  {
+    "Name": "event",
+    "Value": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"fill:white\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\"><path d=\"M0 0h24v24H0V0z\" fill=\"none\"/><path d=\"M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2zm-7 5h5v5h-5z\"/></svg>"
+  },
+  {
+    "Name": "insert_chart_outlined",
+    "Value": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"fill:white\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" fill=\"#000000\"><path d=\"M0 0h24v24H0z\" fill=\"none\"/><path d=\"M9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4zm2.5 2.1h-15V5h15v14.1zm0-16.1h-15c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z\"/></svg>"
+  },
+  {
+    "Name": "calendar_view_month",
+    "Value": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"fill:white\" enable-background=\"new 0 0 24 24\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\"><g><path d=\"M0,0h24v24H0V0z\" fill=\"none\"/></g><g><path d=\"M20,4H4C2.9,4,2,4.9,2,6v12c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M8,11H4V6h4V11z M14,11h-4V6h4V11z M20,11h-4V6h4V11z M8,18H4v-5h4V18z M14,18h-4v-5h4V18z M20,18h-4v-5h4V18z\"/></g></svg>"
+  },
+  {
+    "Name": "groups",
+    "Value": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"fill:white\" enable-background=\"new 0 0 24 24\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\"><rect fill=\"none\" height=\"24\" width=\"24\"/><g><path d=\"M12,12.75c1.63,0,3.07,0.39,4.24,0.9c1.08,0.48,1.76,1.56,1.76,2.73L18,18H6l0-1.61c0-1.18,0.68-2.26,1.76-2.73 C8.93,13.14,10.37,12.75,12,12.75z M4,13c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2s-2,0.9-2,2C2,12.1,2.9,13,4,13z M5.13,14.1 C4.76,14.04,4.39,14,4,14c-0.99,0-1.93,0.21-2.78,0.58C0.48,14.9,0,15.62,0,16.43V18l4.5,0v-1.61C4.5,15.56,4.73,14.78,5.13,14.1z M20,13c1.1,0,2-0.9,2-2c0-1.1-0.9-2-2-2s-2,0.9-2,2C18,12.1,18.9,13,20,13z M24,16.43c0-0.81-0.48-1.53-1.22-1.85 C21.93,14.21,20.99,14,20,14c-0.39,0-0.76,0.04-1.13,0.1c0.4,0.68,0.63,1.46,0.63,2.29V18l4.5,0V16.43z M12,6c1.66,0,3,1.34,3,3 c0,1.66-1.34,3-3,3s-3-1.34-3-3C9,7.34,10.34,6,12,6z\"/></g></svg>"
+  },
+  {
+    "Name": "account_balance",
+    "Value": "<svg xmlns=\"http://www.w3.org/2000/svg\" enable-background=\"new 0 0 24 24\" style=\"fill:white\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\"><g><rect fill=\"none\" height=\"24\" width=\"24\"/></g><g><g><rect height=\"7\" width=\"3\" x=\"4\" y=\"10\"/><rect height=\"7\" width=\"3\" x=\"10.5\" y=\"10\"/><rect height=\"3\" width=\"20\" x=\"2\" y=\"19\"/><rect height=\"7\" width=\"3\" x=\"17\" y=\"10\"/><polygon points=\"12,1 2,6 2,8 22,8 22,6\"/></g></g></svg>"
+  },
+  {
+    "Name": "apps",
+    "Value": "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"fill:white\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\"><path d=\"M0 0h24v24H0z\" fill=\"none\"/><path d=\"M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z\"/></svg>"
+  },
+  {
+    "Name": "Ico",
+    "Value": "Ico"
+  },
+  {
+    "Name": "asdas",
+    "Value": "asdasd"
+  },
+  {
+    "Name": "Done",
+    "Value": "Done"
+  },
+  {
+    "Name": "Menu",
+    "Value": "Menu"
+  },
+  {
+    "Name": "materialiconsround",
+    "Value": "24px.svg"
+  },
+  {
+    "Name": " shopping_cart",
+    "Value": " "
+  },
+  {
+    "Name": "settings",
+    "Value": " "
+  },
+  {
+    "Name": " home",
+    "Value": " "
+  },
+  {
+    "Name": "empty dashboard",
+    "Value": " "
+  },
+  {
+    "Name": "dashboard",
+    "Value": " "
+  },
+  {
+    "Name": "group add",
+    "Value": " "
+  },
+  {
+    "Name": "group",
+    "Value": " "
+  },
+  {
+    "Name": "add_to_queue",
+    "Value": " "
+  },
+  {
+    "Name": "shopping_cart",
+    "Value": " "
+  },
+  {
+    "Name": " ",
+    "Value": " "
+  },
+  {
+    "Name": "fdf",
+    "Value": "sdfg"
+  },
+  {
+    "Name": "4",
+    "Value": "4"
+  },
+  {
+    "Name": "dfgdf",
+    "Value": "fdf"
+  },
+  {
+    "Name": "zxc",
+    "Value": "xc"
+  },
+  {
+    "Name": "dsff",
+    "Value": "sdf"
+  },
+  {
+    "Name": "f",
+    "Value": "f"
+  },
+  {
+    "Name": "sef",
+    "Value": "sdfs"
+  },
+  {
+    "Name": "w",
+    "Value": "s"
+  },
+  {
+    "Name": "1111",
+    "Value": "11"
+  },
+  {
+    "Name": "sf",
+    "Value": "sf"
+  },
+  {
+    "Name": "sdfg",
+    "Value": "sdg"
+  },
+  {
+    "Name": "fdsf",
+    "Value": "sd"
+  },
+  {
+    "Name": "sdf",
+    "Value": "fdsf"
+  },
+  {
+    "Name": "add_box",
+    "Value": "f"
+  },
+  {
+    "Name": "dd",
+    "Value": "f"
+  },
+  {
+    "Name": "home",
+    "Value": "a"
+  },
+  {
+    "Name": "Home",
+    "Value": "a"
+  },
+  {
+    "Name": "sfff",
+    "Value": "sdfdf"
+  },
+  {
+    "Name": "string",
+    "Value": "string"
+  },
+  {
+    "Name": "S",
+    "Value": "S"
+  },
+  {
+    "Name": "R",
+    "Value": "R"
+  }
+]
