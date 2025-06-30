@@ -1,6 +1,7 @@
 ﻿using Core.Application.Interfaces.Consumer;
 using Core.Application.Interfaces.Location;
 using Core.Application.Queries.Location.GetLocationByUserNameAndZoneCode;
+using Core.Domain.Nem;
 using Shared.DTOs.CustomerDto;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace Core.Application.Queries.Consumer
 {
     public class ConsumerDetailQuery : IRequest<ConsumerDto>
     {
-        public string AccountNumber { get; set; }
+        public ConsumerRequestModel ConsumerRequest { get; set; }
         public class Handler : IRequestHandler<ConsumerDetailQuery, ConsumerDto>
         {
             private readonly IConsumerRepository _repository;
@@ -23,7 +24,8 @@ namespace Core.Application.Queries.Consumer
 
             public async Task<ConsumerDto> Handle(ConsumerDetailQuery request, CancellationToken cancellationToken)
             {
-                var result = await _repository.GetConsumerDetails(request.AccountNumber);
+                var accountNumber = request.ConsumerRequest.AccountNumber;
+                var result = await _repository.GetConsumerDetails(accountNumber);
                 return result;
             }
         }
