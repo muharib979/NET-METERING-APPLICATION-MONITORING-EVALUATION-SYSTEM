@@ -19,7 +19,7 @@ namespace AdminSystem.Infrastructure.Persistence.Repositories.Consumer
         {
            ConsumerDto consumer = new ConsumerDto();
             using var con = new OracleConnection(Connection.ConnectionString());
-            string sQuery = @"SELECT ACCOUNTNUMBER AccountNumber,NAME Name, METERNUMBER MeterNumber,LOAD Load,TARIFFNAME Tariff,OFFICECODE OfficeCode,VOLTAGELEVELNEM VoltageLevel,SITEADDRESS SiteAddress FROM se WHERE ACCOUNTNUMBER =:accountNumber";
+            string sQuery = @"SELECT ACCOUNTNUMBER AccountNumber,NAME Name, METERNUMBER MeterNumber,LOAD Load,TARIFFNAME Tariff,OFFICECODE OfficeCode,VOLTAGELEVELNEM VoltageLevel,SITEADDRESS SiteAddress FROM NEM_CUSTOMER_INFO WHERE ACCOUNTNUMBER =:accountNumber";
              consumer = await con.QueryFirstOrDefaultAsync<ConsumerDto>(sQuery, new { AccountNumber = accountNumber });
             return consumer;
         }
