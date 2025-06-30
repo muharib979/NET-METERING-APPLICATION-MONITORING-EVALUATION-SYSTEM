@@ -11,9 +11,9 @@ using System.Threading.Tasks;
 
 namespace Core.Application.Queries.Consumer
 {
-    public class ConsumerDetailQuery : IRequest<ConsumerDto>
+    public class ConsumerDetailQuery : ConsumerRequestModel, IRequest<ConsumerDto>
     {
-        public ConsumerRequestModel ConsumerRequest { get; set; }
+        //public ConsumerRequestModel ConsumerRequest { get; set; }
         public class Handler : IRequestHandler<ConsumerDetailQuery, ConsumerDto>
         {
             private readonly IConsumerRepository _repository;
@@ -24,8 +24,8 @@ namespace Core.Application.Queries.Consumer
 
             public async Task<ConsumerDto> Handle(ConsumerDetailQuery request, CancellationToken cancellationToken)
             {
-                var accountNumber = request.ConsumerRequest.AccountNumber;
-                var result = await _repository.GetConsumerDetails(accountNumber);
+
+                var result = await _repository.GetConsumerDetails(request.AccountNumber);
                 return result;
             }
         }

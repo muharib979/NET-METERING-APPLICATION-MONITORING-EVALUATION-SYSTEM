@@ -19,7 +19,7 @@ namespace AdminSystem.API.Controllers.Nem_Application
         [HttpPost("/api/consumerinfo")]
 
         
-        public async Task<IActionResult> GetConsumerDetails([FromQuery] ConsumerDetailQuery command)
+        public async Task<IActionResult> GetConsumerDetails([FromBody] ConsumerDetailQuery command)
         {
             var result = await _mediatr.Send(command);
             if (result != null)
