@@ -1,6 +1,7 @@
 ﻿using Core.Application.Interfaces.Consumer;
 using Core.Application.Interfaces.PaymentConfirmation;
 using Core.Application.Queries.Consumer;
+using Core.Domain.Nem;
 using Shared.DTOs.CustomerDto;
 using Shared.DTOs.PaymentConfirmation;
 using System;
@@ -11,10 +12,9 @@ using System.Threading.Tasks;
 
 namespace Core.Application.Queries.Payment
 {
-    public class PaymentStutusQuery : IRequest<PaymentStatusDto>
+    public class PaymentStutusQuery : PaymentStatusModal, IRequest<PaymentStatusDto>
     {
-        public string BillNumber { get; set; }
-        public string LocationCode { get; set; }
+
 
         public class Handler : IRequestHandler<PaymentStutusQuery, PaymentStatusDto>
         {
