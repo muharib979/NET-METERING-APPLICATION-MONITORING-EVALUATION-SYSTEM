@@ -8,7 +8,7 @@ namespace Shared.DTOs.PaymentConfirmation
 {
     public class PaymentStatusDto
     {
-        public int BillNumber { get; set; }
+        public string BillNumber { get; set; }
         public bool IsPaid { get; set; }
         public string PaymentDate { get; set; }
     }

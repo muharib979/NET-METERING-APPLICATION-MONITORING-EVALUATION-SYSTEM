@@ -11,7 +11,7 @@ namespace Shared.DTOs.PaymentConfirmation
         public string CustomerNumber { get; set; }
         public decimal TotalBillAmount { get; set; }
         public string LocationCode { get; set; }
-        public int BillNumber { get; set; }
-        public string PaymentDate { get; set; }
+        public string BillNumber { get; set; }
+        public DateTime PaymentDate { get; set; }
     }
 }

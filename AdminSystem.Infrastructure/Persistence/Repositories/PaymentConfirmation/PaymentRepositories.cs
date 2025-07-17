@@ -26,37 +26,46 @@ namespace AdminSystem.Infrastructure.Persistence.Repositories.PaymentConfirmatio
 
         public async Task<PaymentConfirmationDto> PaymentConfirmation(string billNumber, string locationCode, bool isPaid, DateTime paymentDate)
         {
-            //using var con = new OracleConnection(Connection.ConnectionString());
-            var db = await _dbConfigRepo.GetDatabaseDataBylocCodeAsync(locationCode); // Getting database info by id.
+            var db = await _dbConfigRepo.GetDatabaseDataBylocCodeAsync(locationCode);
             string connectionString = _commRepo.CreateConnectionString(db.HOST, db.PORT, db.SERVICE_NAME, db.USER_ID, db.PASSWORD);
+
             using var con = new OracleConnection(connectionString);
 
+            // Convert paymentDate to just date part in "yyyy-MM-dd" format
+            string payments = paymentDate.ToString("yyyy-MM-dd");
+
             string sQuery = @"
-            SELECT 
-                bi.customer_num AS CustomerNumber,
-                r.total_bill_amount AS TotalBillAmount,
-                bi.location_code AS LocationCode,
-                bi.INVOICE_NUM || bi.INVOICE_CHK_DGT AS BillNumber,
-                bi.RCPT_DATE_1 AS PaymentDate
-            FROM 
-                EBC.bc_bill_image bi
-            INNER JOIN 
-                bc_invoice_hdr r ON r.invoice_num = bi.invoice_num
-            WHERE 
-                (bi.INVOICE_NUM || bi.INVOICE_CHK_DGT) = :BillNumber 
-                AND bi.location_code = :LocationCode 
-                AND r.bill_cycle_code = :BillCycleCode";
+        SELECT  
+            bi.customer_num AS CustomerNumber,
+            inv.total_bill_amount AS TotalBillAmount,
+            (bi.INVOICE_NUM || bi.INVOICE_CHK_DGT) AS BillNumber,
+            bi.location_code AS LocationCode,
+            r.receipt_date AS PaymentDate
+        FROM 
+            bc_receipt_hdr r
+        INNER JOIN 
+            EBC.bc_bill_image bi ON r.invoice_num = bi.invoice_num
+        INNER JOIN  
+            BC_INVOICE_HDR inv ON inv.invoice_num = bi.invoice_num
+        WHERE 
+            (bi.INVOICE_NUM || bi.INVOICE_CHK_DGT) = :billNumber
+            AND bi.location_code = :locationCode
+            AND TRUNC(r.receipt_date) = TO_DATE(:paymentDate, 'YYYY-MM-DD')
+    ";
 
-            var parameters = new
-            {
-                BillNumber = billNumber,
-                LocationCode = locationCode,
-                BillCycleCode = paymentDate.ToString("yyyyMM")
-            };
+            var payment = await con.QueryFirstOrDefaultAsync<PaymentConfirmationDto>(
+                sQuery,
+                new
+                {
+                    billNumber = billNumber,
+                    locationCode = locationCode,
+                    paymentDate = payments // Pass as string
+                });
 
-            var payment = await con.QueryFirstOrDefaultAsync<PaymentConfirmationDto>(sQuery, parameters);
             return payment;
         }
+
+
 
         public async Task<PaymentStatusDto> PaymentStatus(string billNumber,string locationCode)
         {
@@ -64,26 +73,14 @@ namespace AdminSystem.Infrastructure.Persistence.Repositories.PaymentConfirmatio
             string connectionString = _commRepo.CreateConnectionString(db.HOST, db.PORT, db.SERVICE_NAME, db.USER_ID, db.PASSWORD);
             using var con = new OracleConnection(connectionString);
 
-            string sQuery = @"
-           SELECT 
-               bi.INVOICE_NUM || bi.INVOICE_CHK_DGT AS BillNumber,
-               TO_CHAR(bi.RCPT_DATE_1, 'YYYY-MM-DD""T""HH24:MI:SS') AS PaymentDate,
+            string sQuery = $@"
+                    select '{billNumber}' BillNumber,TO_CHAR(Receipt_DATE, 'YYYY-MM-DD""T""HH24:MI:SS') AS PaymentDate,
                 CASE 
-                    WHEN  bi.RCPT_DATE_1 IS NOT NULL THEN 1
+                    WHEN  Receipt_DATE IS NOT NULL THEN 1
                     ELSE 0
-                END AS IsPaid
-                  FROM 
-                     EBC.bc_bill_image bi
-                 INNER JOIN 
-                     bc_invoice_hdr r ON r.invoice_num = bi.invoice_num
-                     WHERE (bi.INVOICE_NUM || bi.INVOICE_CHK_DGT) = :BillNumber";
+                END AS IsPaid  from bc_receipt_hdr where invoice_num = subStr('{billNumber}',1,8)";
 
-            var parameters = new
-            {
-                BillNumber = billNumber
-            };
-
-            var payment = await con.QueryFirstOrDefaultAsync<PaymentStatusDto>(sQuery, parameters);
+            var payment = await con.QueryFirstOrDefaultAsync<PaymentStatusDto>(sQuery);
             return payment;
         }
     }
